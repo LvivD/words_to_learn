@@ -14,5 +14,5 @@ r = requests.get(url, headers = {'app_id' : app_id, 'app_key' : app_key})
 print("code {}\n".format(r.status_code))
 print("text \n" + r.text)
 print("json \n" + json.dumps(r.json()))
-with open('tests/resaults.json', 'w') as write_file:
+with open('tests/resaults '+word_id+'.json', 'w') as write_file:
     write_file.write(json.dumps(r.json()))
