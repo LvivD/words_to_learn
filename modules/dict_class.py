@@ -47,6 +47,10 @@ class WordsDict:
     def get_first_n_words(self, n):
         return self.lst[:n]
 
+    def __iter__(self):
+        for word in self.lst:
+            yield word.item
+
 
 class Word:
     def __init__(self, item):

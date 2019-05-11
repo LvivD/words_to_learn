@@ -5,7 +5,7 @@ def get_an_article_url():
     sections = 'arts, automobiles, books, business, fashion, food, health, home, insider, magazine, movies, national, nyregion, obituaries, opinion, politics, realestate, science, sports, sundayreview, technology, theater, tmagazine, travel, upshot, world'.split(', ')
 
     for elem in sections:
-        print(elem)
+        print(elem)  # should be replaced
 
     chosen_section = input('Chose the section you want: ')
     api_key = 'HPlFltAhd0Lj1Q4XYUvH644w1cPk2XDz'
@@ -21,9 +21,9 @@ def get_an_article_url():
 
     data = json.loads(data)
 
-    # print(type(data))
-
-    print(data['results'][0]['url'])
-    return data['results'][0]['url']
+    url_list = []
+    for i in range(10):
+        url_list.append(data['results'][i]['url'])
+    return url_list
 if __name__ == '__main__':
     print(get_an_article_url())
