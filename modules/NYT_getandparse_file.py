@@ -1,8 +1,9 @@
-def get_words():
-    import NYT_API
-    from urllib import request
-    from html.parser import HTMLParser
-    
+import NYT_API
+from urllib import request
+from html.parser import HTMLParser
+
+
+def get_words(sphere, num_of_articles_to_study):
     class MyHTMLParser(HTMLParser):
 
         container = ''
@@ -68,11 +69,11 @@ def get_words():
 
         return article
 
-    article_list = NYT_API.get_an_article_url()
+    article_list = NYT_API.get_an_article_url(sphere)
     print('got_arcticles_list')
     word_list = []
 
-    i = 1
+    i = num_of_articles_to_study
     for article_url in article_list:
         print(i)
         word_list += parse_article(article_url)

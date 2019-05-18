@@ -1,13 +1,44 @@
-def get_an_article_url():
+def get_an_article_url(section=None):
     from urllib import request
     import json
 
-    sections = 'arts, automobiles, books, business, fashion, food, health, home, insider, magazine, movies, national, nyregion, obituaries, opinion, politics, realestate, science, sports, sundayreview, technology, theater, tmagazine, travel, upshot, world'.split(', ')
+    if section is None:
+        sections = 'arts, ' \
+                   'automobiles, ' \
+                   'books, ' \
+                   'business, ' \
+                   'fashion, ' \
+                   'food, ' \
+                   'health, ' \
+                   'home, ' \
+                   'insider, ' \
+                   'magazine, ' \
+                   'movies, ' \
+                   'national, ' \
+                   'nyregion, ' \
+                   'obituaries, ' \
+                   'opinion, ' \
+                   'politics, ' \
+                   'realestate, ' \
+                   'science, ' \
+                   'sports, ' \
+                   'sundayreview, ' \
+                   'technology, ' \
+                   'theater, ' \
+                   'tmagazine, ' \
+                   'travel, ' \
+                   'upshot, ' \
+                   'world'.split(', ')
 
-    for elem in sections:
-        print(elem)  # should be replaced
+        for elem in sections:
+            print(elem)  # should be replaced
 
-    chosen_section = input('Chose the section you want: ')
+        chosen_section = input('Chose the section you want: ')
+    else:
+        chosen_section = section
+
+
+
     api_key = 'HPlFltAhd0Lj1Q4XYUvH644w1cPk2XDz'
 
     url = '''https://api.nytimes.com/svc/topstories/v2/{0}.json?api-key={1}'''.format(chosen_section, api_key)
@@ -22,8 +53,9 @@ def get_an_article_url():
     data = json.loads(data)
 
     url_list = []
-    for i in range(10):
+    for i in range(1):
         url_list.append(data['results'][i]['url'])
     return url_list
+
 if __name__ == '__main__':
     print(get_an_article_url())

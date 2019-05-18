@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script>L_PREFER_CANVAS=false; L_NO_TOUCH=false; L_DISABLE_3D=false;</script>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.3.4/dist/leaflet.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.3.4/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+    <meta name="viewport" content="width=device-width,
+        initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <style>#map_efe82dc6351a469ab62f56f0819cd17e {
+        position: relative;
+        width: 100.0%;
+        height: 100.0%;
+        left: 0.0%;
+        top: 0.0%;
+        }
+    </style>
+</head>
+<body>    
+    
+    <div class="folium-map" id="map_efe82dc6351a469ab62f56f0819cd17e" ></div>
+</body>
+<script>    
+    
+    
+        var bounds = null;
+    
+
+    var map_efe82dc6351a469ab62f56f0819cd17e = L.map(
+        'map_efe82dc6351a469ab62f56f0819cd17e', {
+        center: [48.314775, 25.082925],
+        zoom: 4,
+        maxBounds: bounds,
+        layers: [],
+        worldCopyJump: false,
+        crs: L.CRS.EPSG3857,
+        zoomControl: true,
+        });
+
+    
+    
+    var tile_layer_78b78fc326f646aa842c3dde20695a50 = L.tileLayer(
+        'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+        {
+        "attribution": null,
+        "detectRetina": false,
+        "maxNativeZoom": 18,
+        "maxZoom": 18,
+        "minZoom": 0,
+        "noWrap": false,
+        "opacity": 1,
+        "subdomains": "abc",
+        "tms": false
+}).addTo(map_efe82dc6351a469ab62f56f0819cd17e);
+    
+        var marker_a5c2f7c69d324e72a82d82b0e1237e89 = L.marker(
+            [59.95, 30.31667],
+            {
+                icon: new L.Icon.Default()
+                }
+            ).addTo(map_efe82dc6351a469ab62f56f0819cd17e);
+        
+    
+            var popup_5242d41d4c8049348216a5e62b26575a = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_6c392e2f74c14cce968e800315babcbc = $(`<div id="html_6c392e2f74c14cce968e800315babcbc" style="width: 100.0%; height: 100.0%;">маковка✨</div>`)[0];
+                popup_5242d41d4c8049348216a5e62b26575a.setContent(html_6c392e2f74c14cce968e800315babcbc);
+            
+
+            marker_a5c2f7c69d324e72a82d82b0e1237e89.bindPopup(popup_5242d41d4c8049348216a5e62b26575a)
+            ;
+
+            
+        
+    
+        marker_a5c2f7c69d324e72a82d82b0e1237e89.bindTooltip(
+            `<div>`
+            + `1` + `</div>`,
+            {"sticky": true}
+        );
+        
+    
+        var marker_4b1fb47d89264e8ab6c5c57a068b8ec6 = L.marker(
+            [55.79831, 37.80223],
+            {
+                icon: new L.Icon.Default()
+                }
+            ).addTo(map_efe82dc6351a469ab62f56f0819cd17e);
+        
+    
+            var popup_9abd2d7aba7c43678f39b0259e07d146 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_b36edd3c0a354fcab5a9afdad2b9bf36 = $(`<div id="html_b36edd3c0a354fcab5a9afdad2b9bf36" style="width: 100.0%; height: 100.0%;">☆K0LLla4bR__tNH04kA★彡</div>`)[0];
+                popup_9abd2d7aba7c43678f39b0259e07d146.setContent(html_b36edd3c0a354fcab5a9afdad2b9bf36);
+            
+
+            marker_4b1fb47d89264e8ab6c5c57a068b8ec6.bindPopup(popup_9abd2d7aba7c43678f39b0259e07d146)
+            ;
+
+            
+        
+    
+        marker_4b1fb47d89264e8ab6c5c57a068b8ec6.bindTooltip(
+            `<div>`
+            + `1` + `</div>`,
+            {"sticky": true}
+        );
+        
+</script>
