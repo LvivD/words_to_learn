@@ -5,8 +5,10 @@
     <title>Your {{ dict_type }} dictionary</title>
 </head>
 <body>
-    {% for i in dict_len %}
-    <p>{{ dict[i] }}</p>
-    {% endfor %}
+    <ol>
+        {% for word in dict %}
+        <li>{{ word }}</li>
+        {% endfor %}
+    </ol>
 </body>
 </html>

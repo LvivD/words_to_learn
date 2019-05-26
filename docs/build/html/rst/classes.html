@@ -1,0 +1,192 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>classes package &#8212; words_to_learn 1.0.0 documentation</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="classes-package">
+<h1>classes package<a class="headerlink" href="#classes-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-classes.HTMLparse">
+<span id="classes-htmlparse-module"></span><h2>classes.HTMLparse module<a class="headerlink" href="#module-classes.HTMLparse" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="classes.HTMLparse.MyHTMLParser">
+<em class="property">class </em><code class="descclassname">classes.HTMLparse.</code><code class="descname">MyHTMLParser</code><span class="sig-paren">(</span><em>*</em>, <em>convert_charrefs=True</em><span class="sig-paren">)</span><a class="headerlink" href="#classes.HTMLparse.MyHTMLParser" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">html.parser.HTMLParser</span></code></p>
+<p>Simple class to parse html pages.
+Copied from html.parser documentation example.</p>
+<dl class="attribute">
+<dt id="classes.HTMLparse.MyHTMLParser.container">
+<code class="descname">container</code><em class="property"> = ''</em><a class="headerlink" href="#classes.HTMLparse.MyHTMLParser.container" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="classes.HTMLparse.MyHTMLParser.handle_data">
+<code class="descname">handle_data</code><span class="sig-paren">(</span><em>data</em><span class="sig-paren">)</span><a class="headerlink" href="#classes.HTMLparse.MyHTMLParser.handle_data" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="classes.HTMLparse.MyHTMLParser.handle_endtag">
+<code class="descname">handle_endtag</code><span class="sig-paren">(</span><em>tag</em><span class="sig-paren">)</span><a class="headerlink" href="#classes.HTMLparse.MyHTMLParser.handle_endtag" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="classes.HTMLparse.MyHTMLParser.handle_starttag">
+<code class="descname">handle_starttag</code><span class="sig-paren">(</span><em>tag</em>, <em>attrs</em><span class="sig-paren">)</span><a class="headerlink" href="#classes.HTMLparse.MyHTMLParser.handle_starttag" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="classes.HTMLparse.MyHTMLParser.separator">
+<code class="descname">separator</code><em class="property"> = '\n'</em><a class="headerlink" href="#classes.HTMLparse.MyHTMLParser.separator" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="classes-class-test-module">
+<h2>classes.class_test module<a class="headerlink" href="#classes-class-test-module" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-classes.dict_class">
+<span id="classes-dict-class-module"></span><h2>classes.dict_class module<a class="headerlink" href="#module-classes.dict_class" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="classes.dict_class.Word">
+<em class="property">class </em><code class="descclassname">classes.dict_class.</code><code class="descname">Word</code><span class="sig-paren">(</span><em>item</em><span class="sig-paren">)</span><a class="headerlink" href="#classes.dict_class.Word" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Class to save word and the number of it’s repeats in dictionary.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="classes.dict_class.WordsDict">
+<em class="property">class </em><code class="descclassname">classes.dict_class.</code><code class="descname">WordsDict</code><span class="sig-paren">(</span><em>lst=[]</em><span class="sig-paren">)</span><a class="headerlink" href="#classes.dict_class.WordsDict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Class for saving and getting word that meets more often.</p>
+<dl class="method">
+<dt id="classes.dict_class.WordsDict.append">
+<code class="descname">append</code><span class="sig-paren">(</span><em>item</em><span class="sig-paren">)</span><a class="headerlink" href="#classes.dict_class.WordsDict.append" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to add words to the dictionary.
+It’s the way how the dictionary should be formed.
+:param item: The item that should be added
+:type item: any type
+:return: None</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="classes.dict_class.WordsDict.get_first_n_words">
+<code class="descname">get_first_n_words</code><span class="sig-paren">(</span><em>n</em><span class="sig-paren">)</span><a class="headerlink" href="#classes.dict_class.WordsDict.get_first_n_words" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to get the list of n Word objects that meet more often .
+:param n: number of objects to return
+:type n: int
+:return: list of Word objects, length of the list is n
+:rtype: list</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="classes.dict_class.WordsDict.get_list_of_n_words">
+<code class="descname">get_list_of_n_words</code><span class="sig-paren">(</span><em>n</em><span class="sig-paren">)</span><a class="headerlink" href="#classes.dict_class.WordsDict.get_list_of_n_words" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to get the list of words that meet more often .
+:param n: number of words to return
+:type n: int
+:return: list, length of the list is n
+:rtype: list</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-classes">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-classes" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">words_to_learn</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, Danylo Sahaidak.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.0.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/rst/classes.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

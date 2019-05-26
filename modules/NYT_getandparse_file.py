@@ -1,82 +1,72 @@
-import NYT_API
+import modules.NYT_API as NYT_API
 from urllib import request
-from html.parser import HTMLParser
+from classes.HTMLparse import MyHTMLParser
 
 
-def get_words(sphere, num_of_articles_to_study):
-    class MyHTMLParser(HTMLParser):
+def parse_article(url):
+    """
+    Function that is parsing the article and creating a list of all it's words.
 
-        container = ''
-        separator = '\n'
-        def handle_starttag(self, tag, attrs):
-            if tag == 'a':
-                self.separator = ' '
-            else:
-                self.separator = '\n'
-            # print("Encountered a start tag:", tag)
+    :param url: article url.
+    :type url: str
+    :return: list of words
+    :rtype: list
+    """
+    resp = request.urlopen(url)
+    if resp.code == 200:
+        data = resp.read().decode()
 
-        def handle_endtag(self, tag):
-            pass
-            # print("Encountered an end tag :", tag)
+        # deleting useless parts
+        data = data[data.index('<body>'): data.index('</body>')]
+        data = data[:data.index('<script>')]
+        if 'A version of this article appears in print on' in data:
+            data = data[:data.index('A version of this article appears in print on')]
+        elif ('Advertisement' in data) and ('Advertisement' in data[:data.index('Advertisement')]):
+            data = data[:(data[::-1].index('tnemesitrevdA') * (-1) - 1)]
 
-        def handle_data(self, data):
-            self.container += data + self.separator
-            # print("Encountered some data  :", data)
+        parser = MyHTMLParser()
+        parser.feed(data)
 
-    def parse_article(url):
-        resp = request.urlopen(url)
-        # print(resp.code)
-        if resp.code == 200:
-            data = resp.read().decode()
+        # To make lower all words an the beginning of the sentences.
+        article = str(parser.container) \
+            .replace('. ', ' .') \
+            .replace('\n', '\n.') \
+            .replace('! ', ' .') \
+            .replace('? ', ' .') \
+            .replace('; ', ' .') \
+            .replace(',', '') \
+            .replace(':', '') \
+            .replace('—', '') \
+            .replace('|', '')
 
-            # just to look at article
-            # with open('tests/nyt_article_example.html', 'w', encoding='utf-8') as file:
-            #     file.write(data)
+        article = article.split()
+        for word_num in range(len(article)):
+            if article[word_num]:
+                first_char = article[word_num][0]
+                if first_char == '.':
+                    article[word_num] = article[word_num][1:].lower()
+    else:
+        print(resp.code)
+        article = []
 
-            # deleting useless parts
-            data = data[data.index('<body>'): data.index('</body>')]
-            data = data[:data.index('<script>')]
-            if 'A version of this article appears in print on' in data:
-                data = data[:data.index('A version of this article appears in print on')]
-            elif ('Advertisement' in data) and ('Advertisement' in data[:data.index('Advertisement')]):
-                data = data[:(data[::-1].index('tnemesitrevdA')*(-1) - 1)]
+    return article
 
-            parser = MyHTMLParser()
-            parser.feed(data)
-            # only to see results
-            # with open('tests/nyt_data.txt', 'w', encoding='utf-8') as file:
-            #     file.write(parser.container)
 
-            article = str(parser.container)\
-                .replace('. ', ' .')\
-                .replace('\n', '\n.')\
-                .replace('! ', ' .')\
-                .replace('? ', ' .')\
-                .replace('; ', ' .')\
-                .replace(',', '')\
-                .replace(':', '')\
-                .replace('—', '') \
-                .replace('|', '')
+def get_words(sphere, num_of_articles_to_study=1):
+    """
+    Function to get one list of words for all articles that should be read.
 
-            article = article.split()
-            for word_num in range(len(article)):
-                if article[word_num]:
-                    first_char = article[word_num][0]
-                    if first_char == '.':
-                        article[word_num] = article[word_num][1:].lower()
-        else:
-            print(resp.code)
-
-        return article
-
-    article_list = NYT_API.get_an_article_url(sphere)
-    print('got_arcticles_list')
+    :param sphere: topic on which articles should be parsed. (One od NYT spheres)
+    :type sphere: str
+    :param num_of_articles_to_study: number of articles to parse
+    :type num_of_articles_to_study: int
+    :return: list of all words
+    :rtype: list
+    """
+    article_list = NYT_API.get_an_article_url(sphere, num_of_articles_to_study)
     word_list = []
 
-    i = num_of_articles_to_study
     for article_url in article_list:
-        print(i)
         word_list += parse_article(article_url)
-        i+=1
 
     return word_list

@@ -1,0 +1,205 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>modules package &#8212; words_to_learn 1.0.0 documentation</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="modules-package">
+<h1>modules package<a class="headerlink" href="#modules-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="modules.get_most_used_words.html">modules.get_most_used_words package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="modules.get_most_used_words.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="modules.get_most_used_words.html#module-modules.get_most_used_words.get_articles_url">modules.get_most_used_words.get_articles_url module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="modules.get_most_used_words.html#module-modules.get_most_used_words">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-modules.NYT_API">
+<span id="modules-nyt-api-module"></span><h2>modules.NYT_API module<a class="headerlink" href="#module-modules.NYT_API" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="modules.NYT_API.get_an_article_url">
+<code class="descclassname">modules.NYT_API.</code><code class="descname">get_an_article_url</code><span class="sig-paren">(</span><em>section=None</em>, <em>num_of_articles_to_study=1</em><span class="sig-paren">)</span><a class="headerlink" href="#modules.NYT_API.get_an_article_url" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>section</strong> – </p></li>
+<li><p><strong>num_of_articles_to_study</strong> – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-modules.NYT_getandparse_file">
+<span id="modules-nyt-getandparse-file-module"></span><h2>modules.NYT_getandparse_file module<a class="headerlink" href="#module-modules.NYT_getandparse_file" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="modules.NYT_getandparse_file.get_words">
+<code class="descclassname">modules.NYT_getandparse_file.</code><code class="descname">get_words</code><span class="sig-paren">(</span><em>sphere</em>, <em>num_of_articles_to_study=1</em><span class="sig-paren">)</span><a class="headerlink" href="#modules.NYT_getandparse_file.get_words" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function to get one list of words for all articles that should be read.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sphere</strong> (<em>str</em>) – topic on which articles should be parsed. (One od NYT spheres)</p></li>
+<li><p><strong>num_of_articles_to_study</strong> (<em>int</em>) – number of articles to parse</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>list of all words</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="modules.NYT_getandparse_file.parse_article">
+<code class="descclassname">modules.NYT_getandparse_file.</code><code class="descname">parse_article</code><span class="sig-paren">(</span><em>url</em><span class="sig-paren">)</span><a class="headerlink" href="#modules.NYT_getandparse_file.parse_article" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function that is parsing the article and creating a list of all it’s words.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>url</strong> (<em>str</em>) – article url.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>list of words</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-modules.main">
+<span id="modules-main-module"></span><h2>modules.main module<a class="headerlink" href="#module-modules.main" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="modules.main.get_dict_from_NYT">
+<code class="descclassname">modules.main.</code><code class="descname">get_dict_from_NYT</code><span class="sig-paren">(</span><em>sphere</em>, <em>num_of_words_to_return=100</em>, <em>num_of_articles_to_study=1</em><span class="sig-paren">)</span><a class="headerlink" href="#modules.main.get_dict_from_NYT" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>The function gets the words from articles on specific theme, pares it, filter mainly known words</dt><dd><p>and returns the number of words which occur most often and weren’t deleted.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sphere</strong> (<em>str</em>) – the sphere on which articles should be read.</p></li>
+<li><p><strong>num_of_words_to_return</strong> (<em>int</em>) – the number of words that should be returned</p></li>
+<li><p><strong>num_of_articles_to_study</strong> (<em>int</em>) – the number of articles that should be read</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>list of words</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-modules">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-modules" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">words_to_learn</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, Danylo Sahaidak.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.0.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/rst/modules.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

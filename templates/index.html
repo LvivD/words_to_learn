@@ -3,7 +3,7 @@
 {% block body %}
 <h1>Choose your sphere of your interest</h1>
 <form action="/dict" method="post">
-    <select name="domain">
+    <select name="sphere">
         <option selected value="Choose one sphere" disabled>Choose a sphere</option>
         <option value="arts">Arts</option>
         <option value="automobiles">Automobiles</option>
@@ -31,6 +31,16 @@
         <option value="travel">Travel</option>
         <option value="upshot">Upshot</option>
         <option value="world">World</option>
+    </select>
+    <input name="words_num" placeholder="Write the length of the dictionary." type="number"/>
+    <select name="articles_num">
+        <option selected value="1">1 article</option>
+        <option value="2">2 articles</option>
+        <option value="3">3 articles</option>
+        <option value="4">4 articles</option>
+        <option value="5">5 articles</option>
+        <option value="7">7 articles</option>
+        <option value="10">10 articles</option>
     </select>
 
 
